@@ -1,0 +1,150 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen gradient background */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+
+    /* Center the form vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper to control spacing */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Main form card */
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+
+    /* Rounded corners */
+    border-radius: 16px;
+
+    /* Soft shadow for modern look */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+    max-width: 400px;
+    margin: auto;
+
+    /* Fade-in animation */
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Form title */
+.form-card h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Each input wrapper */
+.input-group {
+    position: relative; /* Needed for floating labels */
+    margin-bottom: 25px;
+}
+
+/* Input + textarea styling */
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    outline: none;
+    font-size: 14px;
+
+    transition: 0.3s ease; /* Smooth focus animation */
+}
+
+/* Label styling (initial position inside input) */
+.input-group label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    color: #888;
+    font-size: 14px;
+
+    pointer-events: none; /* Prevent label blocking clicks */
+    transition: 0.3s ease;
+
+    background: white;
+    padding: 0 4px;
+}
+
+/* Highlight input when focused */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #667eea;
+}
+
+/* Floating label effect */
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+    top: -8px;
+    left: 8px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+
+    background: #667eea;
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+/* Success message styling */
+.success {
+    margin-top: 20px;
+    padding: 15px;
+
+    background: #e6fffa;
+    border-left: 4px solid #38b2ac;
+
+    border-radius: 8px;
+    color: #065f46;
+    font-size: 14px;
+}
+
+/* Fade-in animation definition */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
